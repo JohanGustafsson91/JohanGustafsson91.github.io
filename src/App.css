@@ -1,0 +1,40 @@
+.page {
+  width: 100%;
+  max-width: 210mm;
+  height: auto; /* A297mm a4 height */
+  padding: 24px;
+  background: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 24px auto;
+}
+
+h2 {
+  margin-top: 32px;
+}
+
+.item {
+  margin-bottom: 32px;
+}
+
+.period {
+  float: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media screen and (min-width: 210mm) {
+  .page {
+    width: 100%;
+    max-width: 210mm;
+    height: auto; /* A297mm a4 height */
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20mm;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20mm auto;
+  }
+}

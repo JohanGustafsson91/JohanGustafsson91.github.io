@@ -1,0 +1,261 @@
+{
+  "name": "Johan Gustafsson",
+  "profile": {
+    "description": "A structured, determined, and quick-learning software developer with extensive expertise in web development. I strive to continually learn new skills and grow both professionally and personally."
+  },
+  "experience": [
+    {
+      "company": "Surikat",
+      "period": {
+        "start": "2024-08",
+        "end": null
+      },
+      "role": "Full-Stack Developer",
+      "description": "",
+      "technologies": [
+        "Node.js",
+        "React",
+        "TypeScript",
+        "Jest",
+        "Testing Library",
+        "MSW"
+      ]
+    },
+    {
+      "company": "Stampen Media",
+      "period": {
+        "start": "2022-01",
+        "end": "2023-12"
+      },
+      "role": "Full-Stack Developer",
+      "description": "Consulted on a project migrating news websites to a new business system. Led a project where we replaced the Single Sign-On (SSO) solution.",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "React",
+        "TypeScript",
+        "Cypress",
+        "Apollo GraphQL",
+        "Jest",
+        "Testing Library",
+        "MSW",
+        "AWS CDK",
+        "Styled Components"
+      ]
+    },
+    {
+      "company": "Barium",
+      "period": {
+        "start": "2021-06",
+        "end": "2022-01"
+      },
+      "role": "Frontend Developer",
+      "description": "Contributed to the development of the next-generation platform for graphical modeling tools and administrative interfaces.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Jest",
+        "Testing Library",
+        "Jira",
+        "Azure",
+        "Styled Components"
+      ]
+    },
+    {
+      "company": "Stampen Media",
+      "period": {
+        "start": "2020-08",
+        "end": "2021-06"
+      },
+      "role": "Full-Stack Developer",
+      "description": "Rewrote existing purchasing and registration flows as well as self-service tools.",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "React",
+        "TypeScript",
+        "Apollo GraphQL",
+        "Jest",
+        "React Testing Library",
+        "MSW",
+        "AWS CDK",
+        "Styled Components"
+      ]
+    },
+    {
+      "company": "Collector Bank",
+      "period": {
+        "start": "2019-09",
+        "end": "2020-08"
+      },
+      "role": "Full-Stack Developer",
+      "description": "Implemented a Single Sign-On solution and a dashboard for all Collector portals.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Styled Components",
+        "SASS",
+        "HTML5",
+        "C#",
+        "Episerver",
+        "Curity"
+      ]
+    },
+    {
+      "company": "Knodd",
+      "period": {
+        "start": "2018-10",
+        "end": "2019-07"
+      },
+      "role": "Full-Stack Developer",
+      "description": "Developed a telehealth application enabling video consultations with experienced pediatric nurses.",
+      "technologies": [
+        "React Native",
+        "Redux",
+        "JavaScript",
+        "Styled Components",
+        "Node.js",
+        "AWS"
+      ]
+    },
+    {
+      "company": "Volvo",
+      "period": {
+        "start": "2017-08",
+        "end": "2018-10"
+      },
+      "role": "Frontend Developer",
+      "description": "Developed the reporting module for Volvo’s truck system and migrated from Angular to React.",
+      "technologies": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "Styled Components",
+        "Node.js",
+        "AngularJS"
+      ]
+    },
+    {
+      "company": "Telia",
+      "period": {
+        "start": "2016-04",
+        "end": "2017-07"
+      },
+      "role": "Frontend Developer",
+      "description": "Contributed to the development of Telia’s “MyBusiness” and “Personal Technician” services.",
+      "technologies": [
+        "AngularJS",
+        "JavaScript",
+        "Redux",
+        "LESS",
+        "HTML5",
+        "Magnolia"
+      ]
+    },
+    {
+      "company": "RaceOne",
+      "period": {
+        "start": "2016-04",
+        "end": "2016-04"
+      },
+      "role": "App Developer",
+      "description": "Enhanced and expanded the company’s application.",
+      "technologies": ["Supersonic", "AngularJS"]
+    },
+    {
+      "company": "Vellnez",
+      "period": {
+        "start": "2016-01",
+        "end": "2016-04"
+      },
+      "role": "Frontend Developer",
+      "description": "Developed a digitized client management system for a beauty salon.",
+      "technologies": ["React", "Redux", "SASS"]
+    },
+    {
+      "company": "ProEquo",
+      "period": {
+        "start": "2015-04",
+        "end": "2016-01"
+      },
+      "role": "Frontend Developer",
+      "description": "Built a CRM system to support the company’s global expansion.",
+      "technologies": ["AngularJS"]
+    }
+  ],
+  "employment": [
+    {
+      "company": "Sprout Technology AB",
+      "role": "Software Developer",
+      "period": {
+        "start": "2023-01",
+        "end": null
+      }
+    },
+    {
+      "company": "AFRY",
+      "role": "Software Developer",
+      "period": {
+        "start": "2021-09",
+        "end": "2022-12"
+      }
+    },
+    {
+      "company": "Evolve Technology AB",
+      "role": "Software Developer",
+      "period": {
+        "start": "2018-01",
+        "end": "2021-09"
+      }
+    },
+    {
+      "company": "Annevo",
+      "role": "Software Developer",
+      "period": {
+        "start": "2016-01",
+        "end": "2018-01"
+      }
+    },
+    {
+      "company": "SolidIO",
+      "role": "Co-owner / Software Developer",
+      "period": {
+        "start": "2015-01",
+        "end": "2016-01"
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "University West",
+      "program": "Bachelor’s Degree in Computer Engineering and System Development (180 ECTS)",
+      "level": "Bachelor",
+      "period": {
+        "start": "2012-01",
+        "end": "2015-01"
+      }
+    },
+    {
+      "institution": "Nösnäsgymnasiet",
+      "program": "Social Science Program with a focus on Economics",
+      "level": "High School",
+      "period": {
+        "start": "2007-01",
+        "end": "2010-01"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "language": "Swedish",
+      "proficiency": "Native"
+    },
+    {
+      "language": "English",
+      "proficiency": "Professional"
+    }
+  ],
+  "additional_information": {
+    "driver_license": true
+  }
+}
