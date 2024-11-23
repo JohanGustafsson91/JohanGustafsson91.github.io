@@ -1,66 +1,165 @@
 import "./App.css";
 import cvData from "./cv-data.json";
+import profileImage from "./profile.jpeg";
 
-function App() {
-  return (
-    <div className="page">
-      <header>
-        <h1>{cvData.name}</h1>
-      </header>
+const App = () => (
+  <div className="page">
+    <header>
+      <div>
+        <h1 className="space-bottom-md">
+          {name}
+          <br />
+          {surname}
+        </h1>
+      </div>
+      <img src={profileImage} />
+    </header>
 
-      <h2>Profile</h2>
-      <p>{cvData.profile.description}</p>
-
-      <h2>Experience</h2>
-      <p>
-        {cvData.experience.map((item) => (
-          <div key={item.description} className="item">
-            <div>
-              <span>
-                <strong>
-                  {item.role}, {item.company}
-                </strong>
-              </span>
-              <span className="period">
-                {item.period.start} - {item.period.end}
-              </span>
+    <div className="wrapper">
+      <aside>
+        <section>
+          <h2>Contact</h2>
+          {contact.map((item) => (
+            <div key={item.type} className="space-bottom-sm">
+              <h4 className="no-space-bottom">{item.type}</h4>
+              <a href={item.link}>{item.text}</a>
             </div>
-            <p className="description">{item.description}</p>
-            <p className="italic">{item.technologies.join(", ")}</p>
-          </div>
-        ))}
-      </p>
+          ))}
+        </section>
 
-      <h2>Employment</h2>
-      {cvData.employment.map((item) => (
-        <p key={item.company}>
-          <span>
-            <strong>{item.company}</strong>
-            <span>, </span>
-            {item.role}
-          </span>
-          <span className="period">
-            {item.period.start} - {item.period.end}
-          </span>
-        </p>
-      ))}
+        <section>
+          <h2>Skills</h2>
+          <p>{skills.join(", ")}</p>
+        </section>
 
-      <h2>Education</h2>
-      {cvData.education.map((item) => (
-        <div key={item.program}>
-          <span>
-            <strong>{item.institution}</strong>
-            <span>, </span>
-            {item.level}
-          </span>
-          <span className="period">
-            {item.period.start} - {item.period.end}
-          </span>
-          <p className="italic">{item.program}</p>
-        </div>
-      ))}
+        <section>
+          <h2>Languages</h2>
+          <p>{languages.map((item) => item.language).join(", ")}</p>
+        </section>
+      </aside>
+
+      <main className="content">
+        <section>
+          <h2>Profile</h2>
+          <p>{cvData.profile.description}</p>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Experience</h2>
+          {experience.map(
+            ({ role, company, period, description, technologies }) => (
+              <ResumeItem
+                key={description}
+                title={`${role}, ${company}`}
+                meta={displayDate(period)}
+                description={description}
+                additionalInfo={technologies
+                  .map((item) => item.name)
+                  .join(", ")}
+              />
+            ),
+          )}
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Employment</h2>
+          {employment.map(({ role, company, period }) => (
+            <ResumeItem
+              key={company}
+              title={company}
+              meta={displayDate(period)}
+              description={role}
+            />
+          ))}
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Education</h2>
+          {education.map(({ program, institution, period, level }) => (
+            <ResumeItem
+              key={program}
+              title={`${institution}, ${level}`}
+              meta={displayDate(period)}
+              description={program}
+            />
+          ))}
+        </section>
+      </main>
     </div>
-  );
+  </div>
+);
+
+const ResumeItem = ({
+  title,
+  meta,
+  description,
+  additionalInfo,
+}: ResumeItemProps) => (
+  <div className="space-bottom-md">
+    <div className="row">
+      <span>
+        <strong>{title} </strong>
+      </span>
+      <span className="date">{meta}</span>
+    </div>
+    {description ? <p>{description}</p> : null}
+    {additionalInfo ? <p className="date">{additionalInfo}</p> : null}
+  </div>
+);
+
+interface ResumeItemProps {
+  title: string;
+  meta: string;
+  description: string;
+  additionalInfo?: string;
 }
+
+const { name, surname, contact, experience, employment, languages, education } =
+  cvData;
+
+const skills = [
+  ...new Set(
+    experience.flatMap((item) =>
+      item.technologies
+        .filter((item) => !item.hideFromSkills)
+        .map((item) => item.name),
+    ),
+  ),
+];
+
+const displayDate = (period: { start: string; end: string }) =>
+  Object.values(period)
+    .map((value) => {
+      if (value === "") {
+        return "Now";
+      }
+
+      const [year, month] = value.split("-");
+      const formattedMonth = monthNames[parseInt(month, 10) - 1];
+
+      return `${formattedMonth} ${year}`;
+    })
+    .join(" - ");
+
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 export default App;

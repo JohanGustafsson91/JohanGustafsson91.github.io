@@ -1,24 +1,38 @@
 {
-  "name": "Johan Gustafsson",
+  "name": "Johan",
+  "surname": "Gustafsson",
   "profile": {
+    "role": "Programmer",
     "description": "A structured, determined, and quick-learning software developer with extensive expertise in web development. I strive to continually learn new skills and grow both professionally and personally."
   },
+  "contact": [
+    {
+      "type": "Email",
+      "link": "mailto:johan.gustafsson91@gmail.com",
+      "text": "johan.gustafsson91@gmail.com"
+    },
+    {
+      "type": "Github",
+      "link": "https://github.com/JohanGustafsson91",
+      "text": "JohanGustafsson91"
+    }
+  ],
   "experience": [
     {
       "company": "Surikat",
       "period": {
         "start": "2024-08",
-        "end": null
+        "end": ""
       },
       "role": "Full-Stack Developer",
       "description": "",
       "technologies": [
-        "Node.js",
-        "React",
-        "TypeScript",
-        "Jest",
-        "Testing Library",
-        "MSW"
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Node.js" },
+        { "name": "Jest" },
+        { "name": "Testing Library" },
+        { "name": "MSW" }
       ]
     },
     {
@@ -30,17 +44,17 @@
       "role": "Full-Stack Developer",
       "description": "Consulted on a project migrating news websites to a new business system. Led a project where we replaced the Single Sign-On (SSO) solution.",
       "technologies": [
-        "Next.js",
-        "Node.js",
-        "React",
-        "TypeScript",
-        "Cypress",
-        "Apollo GraphQL",
-        "Jest",
-        "Testing Library",
-        "MSW",
-        "AWS CDK",
-        "Styled Components"
+        { "name": "Next.js" },
+        { "name": "Node.js" },
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Cypress" },
+        { "name": "Apollo GraphQL" },
+        { "name": "Jest" },
+        { "name": "Testing Library" },
+        { "name": "MSW" },
+        { "name": "AWS CDK" },
+        { "name": "Styled Components" }
       ]
     },
     {
@@ -52,13 +66,13 @@
       "role": "Frontend Developer",
       "description": "Contributed to the development of the next-generation platform for graphical modeling tools and administrative interfaces.",
       "technologies": [
-        "React",
-        "TypeScript",
-        "Jest",
-        "Testing Library",
-        "Jira",
-        "Azure",
-        "Styled Components"
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Jest" },
+        { "name": "Testing Library" },
+        { "name": "Jira" },
+        { "name": "Azure" },
+        { "name": "Styled Components" }
       ]
     },
     {
@@ -70,16 +84,16 @@
       "role": "Full-Stack Developer",
       "description": "Rewrote existing purchasing and registration flows as well as self-service tools.",
       "technologies": [
-        "Next.js",
-        "Node.js",
-        "React",
-        "TypeScript",
-        "Apollo GraphQL",
-        "Jest",
-        "React Testing Library",
-        "MSW",
-        "AWS CDK",
-        "Styled Components"
+        { "name": "Next.js" },
+        { "name": "Node.js" },
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Apollo GraphQL" },
+        { "name": "Jest" },
+        { "name": "React Testing Library" },
+        { "name": "MSW" },
+        { "name": "AWS CDK" },
+        { "name": "Styled Components" }
       ]
     },
     {
@@ -91,14 +105,14 @@
       "role": "Full-Stack Developer",
       "description": "Implemented a Single Sign-On solution and a dashboard for all Collector portals.",
       "technologies": [
-        "React",
-        "TypeScript",
-        "Styled Components",
-        "SASS",
-        "HTML5",
-        "C#",
-        "Episerver",
-        "Curity"
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Styled Components" },
+        { "name": "SASS" },
+        { "name": "HTML5" },
+        { "name": "C#", "hideFromSkills": true },
+        { "name": "Episerver", "hideFromSkills": true },
+        { "name": "Curity", "hideFromSkills": true }
       ]
     },
     {
@@ -110,12 +124,12 @@
       "role": "Full-Stack Developer",
       "description": "Developed a telehealth application enabling video consultations with experienced pediatric nurses.",
       "technologies": [
-        "React Native",
-        "Redux",
-        "JavaScript",
-        "Styled Components",
-        "Node.js",
-        "AWS"
+        { "name": "React Native" },
+        { "name": "Redux" },
+        { "name": "JavaScript" },
+        { "name": "Styled Components" },
+        { "name": "Node.js" },
+        { "name": "AWS" }
       ]
     },
     {
@@ -127,12 +141,12 @@
       "role": "Frontend Developer",
       "description": "Developed the reporting module for Volvo’s truck system and migrated from Angular to React.",
       "technologies": [
-        "React",
-        "Redux",
-        "JavaScript",
-        "Styled Components",
-        "Node.js",
-        "AngularJS"
+        { "name": "React" },
+        { "name": "Redux" },
+        { "name": "JavaScript" },
+        { "name": "Styled Components" },
+        { "name": "Node.js" },
+        { "name": "AngularJS" }
       ]
     },
     {
@@ -144,12 +158,12 @@
       "role": "Frontend Developer",
       "description": "Contributed to the development of Telia’s “MyBusiness” and “Personal Technician” services.",
       "technologies": [
-        "AngularJS",
-        "JavaScript",
-        "Redux",
-        "LESS",
-        "HTML5",
-        "Magnolia"
+        { "name": "AngularJS" },
+        { "name": "JavaScript" },
+        { "name": "Redux" },
+        { "name": "LESS", "hideFromSkills": true },
+        { "name": "HTML5" },
+        { "name": "Magnolia", "hideFromSkills": true }
       ]
     },
     {
@@ -160,7 +174,10 @@
       },
       "role": "App Developer",
       "description": "Enhanced and expanded the company’s application.",
-      "technologies": ["Supersonic", "AngularJS"]
+      "technologies": [
+        { "name": "Supersonic", "hideFromSkills": true },
+        { "name": "AngularJS" }
+      ]
     },
     {
       "company": "Vellnez",
@@ -170,7 +187,11 @@
       },
       "role": "Frontend Developer",
       "description": "Developed a digitized client management system for a beauty salon.",
-      "technologies": ["React", "Redux", "SASS"]
+      "technologies": [
+        { "name": "React" },
+        { "name": "Redux" },
+        { "name": "SASS" }
+      ]
     },
     {
       "company": "ProEquo",
@@ -180,7 +201,7 @@
       },
       "role": "Frontend Developer",
       "description": "Built a CRM system to support the company’s global expansion.",
-      "technologies": ["AngularJS"]
+      "technologies": [{ "name": "AngularJS" }]
     }
   ],
   "employment": [
@@ -189,7 +210,7 @@
       "role": "Software Developer",
       "period": {
         "start": "2023-01",
-        "end": null
+        "end": ""
       }
     },
     {
