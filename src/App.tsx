@@ -1,17 +1,15 @@
 import "./App.css";
-import cvData from "./cv-data.json";
+import cvData from "./cv.json";
 import profileImage from "./profile.jpeg";
 
 const App = () => (
   <div className="page">
     <header>
-      <div>
-        <h1 className="space-bottom-md">
-          {name}
-          <br />
-          {surname}
-        </h1>
-      </div>
+      <h1>
+        {name}
+        <br />
+        {surname}
+      </h1>
       <img src={profileImage} />
     </header>
 
@@ -34,7 +32,9 @@ const App = () => (
 
         <section>
           <h2>Languages</h2>
-          <p>{languages.map((item) => item.language).join(", ")}</p>
+          {languages.map(({ language, proficiency }) => (
+            <ResumeItem key={language} title={language} meta={proficiency} />
+          ))}
         </section>
       </aside>
 
@@ -116,7 +116,7 @@ const ResumeItem = ({
 interface ResumeItemProps {
   title: string;
   meta: string;
-  description: string;
+  description?: string;
   additionalInfo?: string;
 }
 

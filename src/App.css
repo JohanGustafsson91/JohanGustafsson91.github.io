@@ -122,6 +122,7 @@ p {
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: var(--space-xs);
 }
 
@@ -190,6 +191,10 @@ section {
 
   header {
     flex-direction: column;
+  }
+
+  header h1 {
+    margin-bottom: var(--space-md);
   }
 
   img {

@@ -3,7 +3,7 @@
   "surname": "Gustafsson",
   "profile": {
     "role": "Programmer",
-    "description": "A structured, determined, and quick-learning software developer with extensive expertise in web development. I strive to continually learn new skills and grow both professionally and personally."
+    "description": "A highly structured and determined software developer with a rapid learning ability and extensive expertise in web development, specializing in modern technologies and frameworks."
   },
   "contact": [
     {
@@ -25,7 +25,7 @@
         "end": ""
       },
       "role": "Full-Stack Developer",
-      "description": "",
+      "description": "Consulted on the development and further enhancement of a SaaS platform for the Transportation and Logistics industry.",
       "technologies": [
         { "name": "React" },
         { "name": "TypeScript" },
@@ -42,14 +42,14 @@
         "end": "2023-12"
       },
       "role": "Full-Stack Developer",
-      "description": "Consulted on a project migrating news websites to a new business system. Led a project where we replaced the Single Sign-On (SSO) solution.",
+      "description": "Contributed to migrating news websites to a new business system and led a project to replace the Single Sign-On (SSO) solution.",
       "technologies": [
         { "name": "Next.js" },
         { "name": "Node.js" },
         { "name": "React" },
         { "name": "TypeScript" },
         { "name": "Cypress" },
-        { "name": "Apollo GraphQL" },
+        { "name": "Apollo GraphQL", "hideFromSkills": true },
         { "name": "Jest" },
         { "name": "Testing Library" },
         { "name": "MSW" },
