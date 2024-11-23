@@ -20,7 +20,9 @@ const App = () => (
           {contact.map((item) => (
             <div key={item.type} className="space-bottom-sm">
               <h4 className="no-space-bottom">{item.type}</h4>
-              <a href={item.link}>{item.text}</a>
+              <a href={item.link} target="_blank">
+                {item.text}
+              </a>
             </div>
           ))}
         </section>
