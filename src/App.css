@@ -126,7 +126,7 @@ p {
   margin-bottom: var(--space-xs);
 }
 
-.date {
+.meta {
   color: var(--color-fg-gutter);
   font-size: 0.875rem;
 }

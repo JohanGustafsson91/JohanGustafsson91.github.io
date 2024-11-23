@@ -108,10 +108,10 @@ const ResumeItem = ({
       <span>
         <strong>{title} </strong>
       </span>
-      <span className="date">{meta}</span>
+      <span className="meta">{meta}</span>
     </div>
     {description ? <p>{description}</p> : null}
-    {additionalInfo ? <p className="date">{additionalInfo}</p> : null}
+    {additionalInfo ? <p className="meta">{additionalInfo}</p> : null}
   </div>
 );
 
