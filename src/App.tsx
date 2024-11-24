@@ -52,7 +52,7 @@ export const App = ({
         </Section>
 
         <Section title="Experience" withDivider>
-          {experience.map(
+          {sortByPeriod(experience).map(
             ({ role, company, period, description, technologies }) => (
               <ResumeItem
                 key={description}
@@ -68,7 +68,7 @@ export const App = ({
         </Section>
 
         <Section title="Employment" withDivider>
-          {employment.map(({ role, company, period }) => (
+          {sortByPeriod(employment).map(({ role, company, period }) => (
             <ResumeItem
               key={company}
               title={company}
@@ -79,14 +79,16 @@ export const App = ({
         </Section>
 
         <Section title="Education">
-          {education.map(({ program, institution, period, level }) => (
-            <ResumeItem
-              key={program}
-              title={`${institution}, ${level}`}
-              meta={displayDate(period)}
-              description={program}
-            />
-          ))}
+          {sortByPeriod(education).map(
+            ({ program, institution, period, level }) => (
+              <ResumeItem
+                key={program}
+                title={`${institution}, ${level}`}
+                meta={displayDate(period)}
+                description={program}
+              />
+            ),
+          )}
         </Section>
       </main>
     </div>
@@ -167,7 +169,9 @@ interface ResumeItemProps {
   additionalInfo?: string;
 }
 
-const displayDate = (period: CvData["experience"][number]["period"]) =>
+type Period = CvData["experience"][number]["period"];
+
+const displayDate = (period: Period) =>
   Object.values(period)
     .map((value) => {
       if (value === "") {
@@ -200,8 +204,15 @@ const extractSkills = (experience: CvData["experience"]) => [
   ...new Set(
     experience.flatMap((item) =>
       item.technologies
-        .filter((item) => !item.hideFromSkills)
-        .map((item) => item.name),
+        .filter(({ hideFromSkills }) => !hideFromSkills)
+        .map(({ name }) => name),
     ),
   ),
 ];
+
+const sortByPeriod = <T extends { period: { start: string } }>(list: T[]) =>
+  [...list].sort(
+    (a, b) =>
+      new Date(`${b.period.start}-01`).getTime() -
+      new Date(`${a.period.start}-01`).getTime(),
+  );
