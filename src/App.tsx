@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import "./App.css";
 import profileImage from "./profile.jpeg";
 
@@ -23,8 +24,7 @@ export const App = ({
 
     <div className="wrapper">
       <aside>
-        <section>
-          <h2>Contact</h2>
+        <Section title="Contact">
           {contact.map((item) => (
             <div key={item.type} className="space-bottom-sm">
               <h4 className="no-space-bottom">{item.type}</h4>
@@ -33,31 +33,25 @@ export const App = ({
               </a>
             </div>
           ))}
-        </section>
+        </Section>
 
-        <section>
-          <h2>Skills</h2>
+        <Section title="Skills">
           <p>{extractSkills(experience).join(", ")}</p>
-        </section>
+        </Section>
 
-        <section>
-          <h2>Languages</h2>
+        <Section title="Languages">
           {languages.map(({ language, proficiency }) => (
             <ResumeItem key={language} title={language} meta={proficiency} />
           ))}
-        </section>
+        </Section>
       </aside>
 
       <main className="content">
-        <section>
-          <h2>Profile</h2>
+        <Section title="Profile" withDivider>
           <p>{profile.description}</p>
-        </section>
+        </Section>
 
-        <hr />
-
-        <section>
-          <h2>Experience</h2>
+        <Section title="Experience" withDivider>
           {experience.map(
             ({ role, company, period, description, technologies }) => (
               <ResumeItem
@@ -71,12 +65,9 @@ export const App = ({
               />
             ),
           )}
-        </section>
+        </Section>
 
-        <hr />
-
-        <section>
-          <h2>Employment</h2>
+        <Section title="Employment" withDivider>
           {employment.map(({ role, company, period }) => (
             <ResumeItem
               key={company}
@@ -85,12 +76,9 @@ export const App = ({
               description={role}
             />
           ))}
-        </section>
+        </Section>
 
-        <hr />
-
-        <section>
-          <h2>Education</h2>
+        <Section title="Education">
           {education.map(({ program, institution, period, level }) => (
             <ResumeItem
               key={program}
@@ -99,7 +87,7 @@ export const App = ({
               description={program}
             />
           ))}
-        </section>
+        </Section>
       </main>
     </div>
   </div>
@@ -129,6 +117,25 @@ interface CvData {
     period: { start: string; end: string };
     level: string;
   }[];
+}
+
+const Section = ({
+  title,
+  children,
+  withDivider,
+}: PropsWithChildren<SectionProps>) => (
+  <>
+    <section>
+      <h2>{title}</h2>
+      {children}
+    </section>
+    {withDivider ? <hr /> : null}
+  </>
+);
+
+interface SectionProps {
+  title: string;
+  withDivider?: boolean;
 }
 
 const ResumeItem = ({
