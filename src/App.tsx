@@ -28,7 +28,7 @@ export const App = ({
           {contact.map((item) => (
             <div key={item.type} className="space-bottom-sm">
               <h4 className="no-space-bottom">{item.type}</h4>
-              <a href={item.link} target="_blank">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.text}
               </a>
             </div>
@@ -137,7 +137,11 @@ const ResumeItem = ({
   description,
   additionalInfo,
 }: ResumeItemProps) => (
-  <div className="space-bottom-md">
+  <div
+    className={
+      description || additionalInfo ? "space-bottom-md" : "space-bottom-sm"
+    }
+  >
     <div className="row">
       <span>
         <strong>{title} </strong>
@@ -156,7 +160,7 @@ interface ResumeItemProps {
   additionalInfo?: string;
 }
 
-const displayDate = (period: { start: string; end: string }) =>
+const displayDate = (period: CvData["experience"][number]["period"]) =>
   Object.values(period)
     .map((value) => {
       if (value === "") {
