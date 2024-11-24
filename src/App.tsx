@@ -1,8 +1,16 @@
 import "./App.css";
-import cvData from "./cv.json";
 import profileImage from "./profile.jpeg";
 
-const App = () => (
+export const App = ({
+  name,
+  profile,
+  surname,
+  contact,
+  experience,
+  employment,
+  languages,
+  education,
+}: CvData) => (
   <div className="page">
     <header>
       <h1>
@@ -10,7 +18,7 @@ const App = () => (
         <br />
         {surname}
       </h1>
-      <img src={profileImage} />
+      <img src={profileImage} alt="profile" />
     </header>
 
     <div className="wrapper">
@@ -29,7 +37,7 @@ const App = () => (
 
         <section>
           <h2>Skills</h2>
-          <p>{skills.join(", ")}</p>
+          <p>{extractSkills(experience).join(", ")}</p>
         </section>
 
         <section>
@@ -43,7 +51,7 @@ const App = () => (
       <main className="content">
         <section>
           <h2>Profile</h2>
-          <p>{cvData.profile.description}</p>
+          <p>{profile.description}</p>
         </section>
 
         <hr />
@@ -97,6 +105,32 @@ const App = () => (
   </div>
 );
 
+interface CvData {
+  name: string;
+  surname: string;
+  profile: { description: string };
+  contact: { type: string; link: string; text: string }[];
+  experience: {
+    role: string;
+    company: string;
+    period: { start: string; end: string };
+    description: string;
+    technologies: { name: string; hideFromSkills?: boolean }[];
+  }[];
+  employment: {
+    role: string;
+    company: string;
+    period: { start: string; end: string };
+  }[];
+  languages: { language: string; proficiency: string }[];
+  education: {
+    program: string;
+    institution: string;
+    period: { start: string; end: string };
+    level: string;
+  }[];
+}
+
 const ResumeItem = ({
   title,
   meta,
@@ -121,19 +155,6 @@ interface ResumeItemProps {
   description?: string;
   additionalInfo?: string;
 }
-
-const { name, surname, contact, experience, employment, languages, education } =
-  cvData;
-
-const skills = [
-  ...new Set(
-    experience.flatMap((item) =>
-      item.technologies
-        .filter((item) => !item.hideFromSkills)
-        .map((item) => item.name),
-    ),
-  ),
-];
 
 const displayDate = (period: { start: string; end: string }) =>
   Object.values(period)
@@ -164,4 +185,12 @@ const monthNames = [
   "Dec",
 ];
 
-export default App;
+const extractSkills = (experience: CvData["experience"]) => [
+  ...new Set(
+    experience.flatMap((item) =>
+      item.technologies
+        .filter((item) => !item.hideFromSkills)
+        .map((item) => item.name),
+    ),
+  ),
+];
