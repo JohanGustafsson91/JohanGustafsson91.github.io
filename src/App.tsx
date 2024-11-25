@@ -25,11 +25,11 @@ export const App = ({
     <div className="wrapper">
       <aside>
         <Section title="Contact">
-          {contact.map((item) => (
-            <div key={item.type} className="space-bottom-sm">
-              <h4 className="no-space-bottom">{item.type}</h4>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                {item.text}
+          {contact.map(({ type, link, text }) => (
+            <div key={type} className="space-bottom-sm">
+              <h4 className="no-space-bottom">{type}</h4>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                {text}
               </a>
             </div>
           ))}
@@ -59,9 +59,7 @@ export const App = ({
                 title={`${role}, ${company}`}
                 meta={displayDate(period)}
                 description={description}
-                additionalInfo={technologies
-                  .map((item) => item.name)
-                  .join(", ")}
+                additionalInfo={technologies.map(({ name }) => name).join(", ")}
               />
             ),
           )}
@@ -131,7 +129,7 @@ const Section = ({
       <h2>{title}</h2>
       {children}
     </section>
-    {withDivider ? <hr /> : null}
+    {withDivider && <hr />}
   </>
 );
 
@@ -202,8 +200,8 @@ const monthNames = [
 
 const extractSkills = (experience: CvData["experience"]) => [
   ...new Set(
-    experience.flatMap((item) =>
-      item.technologies
+    experience.flatMap(({ technologies }) =>
+      technologies
         .filter(({ hideFromSkills }) => !hideFromSkills)
         .map(({ name }) => name),
     ),
