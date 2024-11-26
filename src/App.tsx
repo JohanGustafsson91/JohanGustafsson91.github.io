@@ -93,6 +93,88 @@ export const App = ({
   </div>
 );
 
+const Section = ({
+  title,
+  children,
+  withDivider,
+}: PropsWithChildren<SectionProps>) => (
+  <>
+    <section>
+      <h2>{title}</h2>
+      {children}
+    </section>
+    {withDivider && <hr />}
+  </>
+);
+
+const ResumeItem = ({
+  title,
+  meta,
+  description,
+  additionalInfo,
+}: ResumeItemProps) => (
+  <div
+    className={
+      description || additionalInfo ? "space-bottom-md" : "space-bottom-sm"
+    }
+  >
+    <div className="row">
+      <span>
+        <strong>{title} </strong>
+      </span>
+      <span className="meta">{meta}</span>
+    </div>
+    {description ? <p>{description}</p> : null}
+    {additionalInfo ? <p className="meta">{additionalInfo}</p> : null}
+  </div>
+);
+
+const displayDate = (period: Period) =>
+  Object.values(period)
+    .map((dateStringYearAndMonth) => {
+      if (dateStringYearAndMonth === "") {
+        return "Now";
+      }
+
+      const [year, month] = dateStringYearAndMonth.split("-");
+      const formattedMonth = monthNames[parseInt(month, 10) - 1];
+
+      return `${formattedMonth} ${year}`;
+    })
+    .join(" - ");
+
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const sortByPeriod = <T extends { period: Period }>(list: T[]) =>
+  [...list].sort(
+    (a, b) =>
+      new Date(`${b.period.start}-01`).getTime() -
+      new Date(`${a.period.start}-01`).getTime(),
+  );
+
+const extractSkills = (experience: CvData["experience"]) => [
+  ...new Set(
+    experience.flatMap(({ technologies }) =>
+      technologies
+        .filter(({ hideFromSkills }) => !hideFromSkills)
+        .map(({ name }) => name),
+    ),
+  ),
+];
+
 interface CvData {
   name: string;
   surname: string;
@@ -119,46 +201,10 @@ interface CvData {
   }[];
 }
 
-const Section = ({
-  title,
-  children,
-  withDivider,
-}: PropsWithChildren<SectionProps>) => (
-  <>
-    <section>
-      <h2>{title}</h2>
-      {children}
-    </section>
-    {withDivider && <hr />}
-  </>
-);
-
 interface SectionProps {
   title: string;
   withDivider?: boolean;
 }
-
-const ResumeItem = ({
-  title,
-  meta,
-  description,
-  additionalInfo,
-}: ResumeItemProps) => (
-  <div
-    className={
-      description || additionalInfo ? "space-bottom-md" : "space-bottom-sm"
-    }
-  >
-    <div className="row">
-      <span>
-        <strong>{title} </strong>
-      </span>
-      <span className="meta">{meta}</span>
-    </div>
-    {description ? <p>{description}</p> : null}
-    {additionalInfo ? <p className="meta">{additionalInfo}</p> : null}
-  </div>
-);
 
 interface ResumeItemProps {
   title: string;
@@ -168,49 +214,3 @@ interface ResumeItemProps {
 }
 
 type Period = CvData["experience"][number]["period"];
-
-const displayDate = (period: Period) =>
-  Object.values(period)
-    .map((value) => {
-      if (value === "") {
-        return "Now";
-      }
-
-      const [year, month] = value.split("-");
-      const formattedMonth = monthNames[parseInt(month, 10) - 1];
-
-      return `${formattedMonth} ${year}`;
-    })
-    .join(" - ");
-
-const monthNames = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
-const extractSkills = (experience: CvData["experience"]) => [
-  ...new Set(
-    experience.flatMap(({ technologies }) =>
-      technologies
-        .filter(({ hideFromSkills }) => !hideFromSkills)
-        .map(({ name }) => name),
-    ),
-  ),
-];
-
-const sortByPeriod = <T extends { period: { start: string } }>(list: T[]) =>
-  [...list].sort(
-    (a, b) =>
-      new Date(`${b.period.start}-01`).getTime() -
-      new Date(`${a.period.start}-01`).getTime(),
-  );
