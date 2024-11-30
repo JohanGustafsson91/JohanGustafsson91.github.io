@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-fg);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+h4 {
+  margin-bottom: var(--space-xs);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: var(--space-md);
+  height: 2px;
+  background-color: var(--color-border);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-xs);
+}

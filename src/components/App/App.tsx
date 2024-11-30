@@ -1,6 +1,7 @@
-import { PropsWithChildren } from "react";
 import "./App.css";
-import profileImage from "./profile.jpeg";
+import { ResumeItem } from "./App.ResumeItem";
+import { Section } from "./App.Section";
+import profileImage from "./App.profile.jpeg";
 
 export const App = ({
   name,
@@ -93,42 +94,6 @@ export const App = ({
   </div>
 );
 
-const Section = ({
-  title,
-  children,
-  withDivider,
-}: PropsWithChildren<SectionProps>) => (
-  <>
-    <section>
-      <h2>{title}</h2>
-      {children}
-    </section>
-    {withDivider && <hr />}
-  </>
-);
-
-const ResumeItem = ({
-  title,
-  meta,
-  description,
-  additionalInfo,
-}: ResumeItemProps) => (
-  <div
-    className={
-      description || additionalInfo ? "space-bottom-md" : "space-bottom-sm"
-    }
-  >
-    <div className="row">
-      <span>
-        <strong>{title} </strong>
-      </span>
-      <span className="meta">{meta}</span>
-    </div>
-    {description ? <p>{description}</p> : null}
-    {additionalInfo ? <p className="meta">{additionalInfo}</p> : null}
-  </div>
-);
-
 const displayDate = (period: Period) =>
   Object.values(period)
     .map((dateStringYearAndMonth) => {
@@ -143,20 +108,11 @@ const displayDate = (period: Period) =>
     })
     .join(" - ");
 
-const monthNames = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
+const monthNames = Array.from({ length: 12 }, (_, i) =>
+  new Intl.DateTimeFormat("en-US", { month: "short" }).format(
+    new Date(2020, i),
+  ),
+);
 
 const sortByPeriod = <T extends { period: Period }>(list: T[]) =>
   [...list].sort(
@@ -199,18 +155,6 @@ interface CvData {
     period: { start: string; end: string };
     level: string;
   }[];
-}
-
-interface SectionProps {
-  title: string;
-  withDivider?: boolean;
-}
-
-interface ResumeItemProps {
-  title: string;
-  meta: string;
-  description?: string;
-  additionalInfo?: string;
 }
 
 type Period = CvData["experience"][number]["period"];
