@@ -30,9 +30,7 @@
         { "name": "React" },
         { "name": "TypeScript" },
         { "name": "Node.js" },
-        { "name": "Jest" },
-        { "name": "Testing Library" },
-        { "name": "MSW" }
+        { "name": "Jest" }
       ]
     },
     {
@@ -201,7 +199,7 @@
       },
       "role": "Frontend Developer",
       "description": "Built a CRM system to support the company’s global expansion.",
-      "technologies": [{ "name": "AngularJS" }]
+      "technologies": [{ "name": "AngularJS" }, { "name": "CSS" }]
     }
   ],
   "employment": [
