@@ -19,6 +19,22 @@
   ],
   "experience": [
     {
+      "company": "Stampen Media",
+      "period": {
+        "start": "2025-04",
+        "end": ""
+      },
+      "role": "Full-Stack Developer",
+      "description": "",
+      "technologies": [
+        { "name": "React" },
+        { "name": "TypeScript" },
+        { "name": "Node.js" },
+        { "name": "AWS" },
+        { "name": "Jest" }
+      ]
+    },
+    {
       "company": "Surikat",
       "period": {
         "start": "2024-08",
