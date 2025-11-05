@@ -28,6 +28,14 @@
 - YAGNI (You Aren't Gonna Need It) - Only implement what is needed now
 - Functional Programming - Use pure functions, immutability, and composition where possible
 
+### KISS & YAGNI Guidelines
+- Keep code in the file where it's used until it's needed elsewhere
+- Don't create separate utility files for functions used in only one place
+- Don't extract interfaces/types to shared files unless actually reused
+- Prefer simple, direct solutions over abstractions that might be useful "someday"
+- Only add complexity when there's a clear, immediate need
+- File organization should follow actual usage patterns, not hypothetical future needs
+
 ## Build Configuration
 - TypeScript targeting ES2020 with modern module resolution
 - Vite for development and production builds

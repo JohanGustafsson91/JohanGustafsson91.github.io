@@ -96,14 +96,22 @@ export const App = ({
 
 const displayDate = (period: Period) =>
   Object.values(period)
-    .map((dateStringYearAndMonth) => {
+    .map((dateStringYearAndMonth: string) => {
       if (dateStringYearAndMonth === "") {
         return "Now";
       }
 
       const [year, month] = dateStringYearAndMonth.split("-");
-      const formattedMonth = monthNames[parseInt(month, 10) - 1];
+      if (!year || !month || month.length !== 2) {
+        return dateStringYearAndMonth;
+      }
 
+      const monthIndex = parseInt(month, 10) - 1;
+      if (monthIndex < 0 || monthIndex > 11) {
+        return dateStringYearAndMonth;
+      }
+
+      const formattedMonth = monthNames[monthIndex];
       return `${formattedMonth} ${year}`;
     })
     .join(" - ");
@@ -131,6 +139,11 @@ const extractSkills = (experience: CvData["experience"]) => [
   ),
 ];
 
+interface Period {
+  start: string;
+  end: string;
+}
+
 interface CvData {
   name: string;
   surname: string;
@@ -139,22 +152,22 @@ interface CvData {
   experience: {
     role: string;
     company: string;
-    period: { start: string; end: string };
+    period: Period;
     description: string;
     technologies: { name: string; hideFromSkills?: boolean }[];
   }[];
   employment: {
     role: string;
     company: string;
-    period: { start: string; end: string };
+    period: Period;
   }[];
   languages: { language: string; proficiency: string }[];
   education: {
     program: string;
     institution: string;
-    period: { start: string; end: string };
+    period: Period;
     level: string;
   }[];
 }
 
-type Period = CvData["experience"][number]["period"];
+
