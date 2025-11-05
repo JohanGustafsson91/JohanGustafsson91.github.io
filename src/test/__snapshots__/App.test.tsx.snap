@@ -1,0 +1,623 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > renders correctly 1`] = `
+<div>
+  <div
+    class="page"
+  >
+    <header>
+      <h1>
+        Johan
+        <br />
+        Gustafsson
+      </h1>
+      <img
+        alt="profile"
+        src="/src/components/App/App.profile.jpeg"
+      />
+    </header>
+    <div
+      class="wrapper"
+    >
+      <aside>
+        <section>
+          <h2>
+            Contact
+          </h2>
+          <div
+            class="space-bottom-sm"
+          >
+            <h4
+              class="no-space-bottom"
+            >
+              Email
+            </h4>
+            <a
+              href="mailto:johan.gustafsson91@gmail.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              johan.gustafsson91@gmail.com
+            </a>
+          </div>
+          <div
+            class="space-bottom-sm"
+          >
+            <h4
+              class="no-space-bottom"
+            >
+              Github
+            </h4>
+            <a
+              href="https://github.com/JohanGustafsson91"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              JohanGustafsson91
+            </a>
+          </div>
+        </section>
+        <section>
+          <h2>
+            Skills
+          </h2>
+          <p>
+            AWS, TypeScript, Node.js, React, Jest, Next.js, Cypress, Testing Library, MSW, AWS CDK, Styled Components, Jira, Azure, React Testing Library, SASS, HTML5, CSS, React Native, Redux, JavaScript, AngularJS
+          </p>
+        </section>
+        <section>
+          <h2>
+            Languages
+          </h2>
+          <div
+            class="space-bottom-sm"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Swedish
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Native
+              </span>
+            </div>
+          </div>
+          <div
+            class="space-bottom-sm"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  English
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Professional
+              </span>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <main
+        class="content"
+      >
+        <section>
+          <h2>
+            Profile
+          </h2>
+          <p>
+            I’m a dedicated and thoughtful software developer with a strong ability to learn quickly and adapt to new challenges. I bring extensive expertise in web development, with experience spanning both frontend and backend.
+          </p>
+        </section>
+        <hr />
+        <section>
+          <h2>
+            Experience
+          </h2>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Stampen Media
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Apr 2025 - Now
+              </span>
+            </div>
+            <p>
+              Part of the infrastructure team working with AWS services and cloud architecture. Contributed to the migration of the company's identity provider (IdP).
+            </p>
+            <p
+              class="meta"
+            >
+              AWS, TypeScript, Node.js, React, Jest
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Surikat
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Aug 2024 - Mar 2025
+              </span>
+            </div>
+            <p>
+              Consulted on the development and further enhancement of a SaaS platform for the Transportation and Logistics industry.
+            </p>
+            <p
+              class="meta"
+            >
+              React, TypeScript, Node.js, Jest
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Stampen Media
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2022 - Dec 2023
+              </span>
+            </div>
+            <p>
+              Contributed to migrating news websites to a new business system and led a project to replace the Single Sign-On (SSO) solution.
+            </p>
+            <p
+              class="meta"
+            >
+              Next.js, Node.js, React, TypeScript, Cypress, Jest, Testing Library, MSW, AWS CDK, Styled Components
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Frontend Developer, Barium
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jun 2021 - Jan 2022
+              </span>
+            </div>
+            <p>
+              Contributed to the development of the next-generation platform for graphical modeling tools and administrative interfaces.
+            </p>
+            <p
+              class="meta"
+            >
+              React, TypeScript, Jest, Testing Library, Jira, Azure, Styled Components
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Stampen Media
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Aug 2020 - Jun 2021
+              </span>
+            </div>
+            <p>
+              Rewrote existing purchasing and registration flows as well as self-service tools.
+            </p>
+            <p
+              class="meta"
+            >
+              Next.js, Node.js, React, TypeScript, Apollo GraphQL, Jest, React Testing Library, MSW, AWS CDK, Styled Components
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Collector Bank
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Sep 2019 - Aug 2020
+              </span>
+            </div>
+            <p>
+              Implemented a Single Sign-On solution and a dashboard for all Collector portals.
+            </p>
+            <p
+              class="meta"
+            >
+              React, TypeScript, Styled Components, SASS, HTML5, CSS, C#, Episerver, Curity
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Full-Stack Developer, Knodd
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Oct 2018 - Jul 2019
+              </span>
+            </div>
+            <p>
+              Developed a telehealth application enabling video consultations with experienced pediatric nurses.
+            </p>
+            <p
+              class="meta"
+            >
+              React Native, Redux, JavaScript, Styled Components, Node.js, AWS
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Frontend Developer, Volvo
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Aug 2017 - Oct 2018
+              </span>
+            </div>
+            <p>
+              Developed the reporting module for Volvo’s truck system and migrated from Angular to React.
+            </p>
+            <p
+              class="meta"
+            >
+              React, Redux, JavaScript, Styled Components, Node.js, AngularJS
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Frontend Developer, Telia
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Apr 2016 - Jul 2017
+              </span>
+            </div>
+            <p>
+              Contributed to the development of Telia’s “MyBusiness” and “Personal Technician” services.
+            </p>
+            <p
+              class="meta"
+            >
+              AngularJS, JavaScript, Redux, LESS, HTML5, Magnolia
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  App Developer, RaceOne
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Apr 2016 - Apr 2016
+              </span>
+            </div>
+            <p>
+              Enhanced and expanded the company’s application.
+            </p>
+            <p
+              class="meta"
+            >
+              Supersonic, AngularJS
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Frontend Developer, Vellnez
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2016 - Apr 2016
+              </span>
+            </div>
+            <p>
+              Developed a digitized client management system for a beauty salon.
+            </p>
+            <p
+              class="meta"
+            >
+              React, Redux, SASS
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Frontend Developer, ProEquo
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Apr 2015 - Jan 2016
+              </span>
+            </div>
+            <p>
+              Built a CRM system to support the company’s global expansion.
+            </p>
+            <p
+              class="meta"
+            >
+              AngularJS, CSS
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section>
+          <h2>
+            Employment
+          </h2>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Sprout Technology AB
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2023 - Now
+              </span>
+            </div>
+            <p>
+              Software Developer
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  AFRY
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Sep 2021 - Dec 2022
+              </span>
+            </div>
+            <p>
+              Software Developer
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Evolve Technology AB
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2018 - Sep 2021
+              </span>
+            </div>
+            <p>
+              Software Developer
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Annevo
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2016 - Jan 2018
+              </span>
+            </div>
+            <p>
+              Software Developer
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  SolidIO
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2015 - Jan 2016
+              </span>
+            </div>
+            <p>
+              Co-owner / Software Developer
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section>
+          <h2>
+            Education
+          </h2>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  University West, Bachelor
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2012 - Jan 2015
+              </span>
+            </div>
+            <p>
+              Bachelor’s Degree in Computer Engineering and System Development (180 ECTS)
+            </p>
+          </div>
+          <div
+            class="space-bottom-md"
+          >
+            <div
+              class="row"
+            >
+              <span>
+                <strong>
+                  Nösnäsgymnasiet, High School
+                   
+                </strong>
+              </span>
+              <span
+                class="meta"
+              >
+                Jan 2007 - Jan 2010
+              </span>
+            </div>
+            <p>
+              Social Science Program with a focus on Economics
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+`;

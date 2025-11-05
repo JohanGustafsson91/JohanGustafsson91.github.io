@@ -1,4 +1,6 @@
-export const ResumeItem = ({
+import { memo } from 'react';
+
+export const ResumeItem = memo(({
   title,
   meta,
   description,
@@ -18,7 +20,9 @@ export const ResumeItem = ({
     {description ? <p>{description}</p> : null}
     {additionalInfo ? <p className="meta">{additionalInfo}</p> : null}
   </div>
-);
+));
+
+ResumeItem.displayName = 'ResumeItem';
 
 interface Props {
   title: string;

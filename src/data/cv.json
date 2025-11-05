@@ -25,12 +25,12 @@
         "end": ""
       },
       "role": "Full-Stack Developer",
-      "description": "",
+      "description": "Part of the infrastructure team working with AWS services and cloud architecture. Contributed to the migration of the company's identity provider (IdP).",
       "technologies": [
-        { "name": "React" },
+        { "name": "AWS" },
         { "name": "TypeScript" },
         { "name": "Node.js" },
-        { "name": "AWS" },
+        { "name": "React" },
         { "name": "Jest" }
       ]
     },
