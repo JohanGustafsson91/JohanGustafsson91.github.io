@@ -25,7 +25,7 @@
         "end": ""
       },
       "role": "Full-Stack Developer",
-      "description": "",
+      "description": "Led infrastructure initiatives using AWS, focusing on cloud architecture optimization and security enhancement. Contributed to the migration of the company's identity provider (IdP), ensuring minimal disruption and secure transition of user services. Collaborated within the infrastructure team to improve platform reliability and developer workflows through implementation of Infrastructure as Code (IaC) using AWS CDK. Established best practices for cloud resource management and automated deployment pipelines.",
       "technologies": [
         { "name": "React" },
         { "name": "TypeScript" },
