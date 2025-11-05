@@ -25,13 +25,11 @@
         "end": ""
       },
       "role": "Full-Stack Developer",
-      "description": "Part of the infrastructure team working with AWS services and cloud architecture. Contributed to the migration of the company's identity provider (IdP) and helped improve developer workflows using AWS CDK.",
+      "description": "Part of the infrastructure team working with AWS services and cloud architecture. Contributed to the migration of the company's identity provider (IdP).",
       "technologies": [
-        { "name": "React" },
         { "name": "TypeScript" },
         { "name": "Node.js" },
-        { "name": "AWS" },
-        { "name": "Jest" }
+        { "name": "AWS" }
       ]
     },
     {
