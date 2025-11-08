@@ -23,14 +23,21 @@ jobs:
       node-version: "20"
       package-manager: "pnpm"
       lint-script: "lint"
-      test-script: "test"
+      test-script: "test run"
       build-script: "build"
 
-  # Call the reusable auto-merge workflow for Dependabot PRs
+  # Enable auto-merge for Dependabot PRs after validation
   auto-merge:
-    name: Auto-merge Dependabot PRs
+    name: Enable auto-merge for Dependabot PRs
     needs: [validate]
-    uses: JohanGustafsson91/github-reusable-actions/.github/workflows/auto-merge-dependabot.yml@main
-    with:
-      merge-method: squash
-      exclude: major
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
