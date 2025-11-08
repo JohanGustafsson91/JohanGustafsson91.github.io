@@ -23,7 +23,7 @@ jobs:
       node-version: "20"
       package-manager: "pnpm"
       lint-script: "lint"
-      test-script: "test run"
+      test-script: "test:coverage"
       build-script: "build"
 
   # Call the reusable auto-merge workflow for Dependabot PRs
